@@ -1,0 +1,41 @@
+///////////////////////////////// Footer /////////////////////
+@import '../partials/colors';
+
+
+.page-footer {
+    
+}
+.page-footer-container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.page-footer-title {
+
+    h1 {
+        font-size: 1.6em;
+        color: $colorLightBlue;
+        text-transform: uppercase;
+        font-family: 'Ultra', serif;
+        margin: 0;
+        padding: 1em;
+    }
+}
+
+
+.page-footer-social {
+    display: flex;
+    color: $colorLightBlue;
+    
+}
+.facebook {
+    padding: 1em;
+
+}
+.insta {
+    padding: 1em;
+}
+
+
+///////////////////////////////////////////////////////////////////////

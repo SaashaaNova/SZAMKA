@@ -1,0 +1,129 @@
+///////////////////////////////// HEDER /////////////////////
+
+@import '../partials/colors'; 
+
+.page-header {
+    height: 8em;
+}
+
+.header-container  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    height: 100%;
+}
+
+.title {
+    width: 15%;
+    margin: 0;
+    display: flex;
+
+    a {
+        text-decoration: none;
+
+        &:focus {
+            background: none;
+        }
+    }
+
+    h1{
+        font-size: 3.7em;
+        color: $colorDarkBlue;
+        text-transform: uppercase;
+        font-family: 'Ultra', serif;
+        margin: 0;
+    }
+}
+
+.page-header-navigation-left-nav {
+    ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+
+        li {
+            list-style: none;
+            padding: 1em;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: 500;
+        }
+    }
+
+}
+
+.page-header-navigation-right-nav {
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+
+.phone-number {
+    margin: 0;
+    font-weight: 500;
+    width:50%;
+    text-align: right;
+    padding-right: 1em;
+
+    h1 {
+        width: 100%;
+        color: $colorText;
+        font-size: 1.2em;
+    }
+}
+
+.profile-header-landing {
+    height: 5.8em;
+    width: 5.8em;
+    margin-left: 1em;
+}
+.log-in-button {
+    width:25%;
+  button {
+        cursor: pointer;
+        background: none;
+        color: $colorText;
+        border: none;
+        font-weight: 500;
+        font-size: 1.4em;
+        margin: 0;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+}
+.log-out-button {
+    width:25%;
+    margin: 0;
+    font-size: 1em;
+
+    button {
+        width: 100px;
+        height: 40px;
+        background: $colorDarkBlue;
+        border: none;
+        font-size: 1.3em;
+        color: $colorWhite;
+        font-weight: 700;
+        border-radius: 0.5em;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            background: $colorDarkYellow;
+        }
+    }
+
+}
+
+///////////////////////////////////////////////////////////////////////

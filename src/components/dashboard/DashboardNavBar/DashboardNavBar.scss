@@ -1,0 +1,86 @@
+/////////////////////// Header Dashboard//////////////////////// 
+
+.dashboard-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8%;
+    background: #fff;
+    border-radius: 0.8em 0.8em 0 0;
+    box-shadow: 0 8px 5px -2px #ddd;
+    
+    a {
+        text-decoration: none;
+
+        &:active {
+            background: none;
+        }
+    }
+
+    h1 {
+        font-size: 2.7em;
+        color: #252A5C;
+        text-transform: uppercase;
+        font-family: 'Ultra', serif;
+        margin: 0;
+        margin-left: 0.8em;
+    }
+}
+
+.user-menu {
+    height: 5.8em;
+    width: 5.8em;
+    margin-right: 4em;
+}
+
+.dashboard-site-nav-cnt {
+    width: 50%;
+}
+
+.dashboard-site-nav ul {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-link,
+.go-to-recipes {
+    list-style: none;
+    transition: .8em;
+
+    a {
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-block;
+        padding-left: 1em;
+        transition: .8em;
+      
+        &:hover {
+            color: #275C91;
+        }
+        
+        &:active {
+            background: none;
+        }
+    }
+}
+
+
+.dashboard-link {
+
+    a {
+        font-size: 3.2em;
+    }
+   
+}
+
+.go-to-recipes {
+
+    a {
+   
+        font-size: 1.8em;
+      
+    }
+}
