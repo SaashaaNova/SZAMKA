@@ -3,8 +3,12 @@
     position: relative;
 }
 
-
 .profile-main-notificationes {
-
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 

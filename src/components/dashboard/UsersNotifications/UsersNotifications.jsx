@@ -9,19 +9,17 @@ const UsersNotifications = (props) => {
   console.log(userNotifications);
 
   return (
-    <div>
-      <div>
+    <div className='user-notify-cnt'>
+      <div className='user-notify-title'>
         <span>Notyfikacje</span>
       </div>
-      <ul>
+      <ul className='user-notify-list'>
         {userNotifications && userNotifications.map(item => (
           <li key={item.id}>
-            <span>{item.content} </span>
-            <span>{item.title} </span>
-            <span>{item.name}</span>
-            <div>
+            <div className='user-notify-item-date'>
               {moment(item.time.toDate()).fromNow()}
             </div>
+            <span className='user-notify-item-content'>{item.content} </span>
           </li>
         ))}
       </ul>

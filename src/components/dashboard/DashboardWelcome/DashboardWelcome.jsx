@@ -10,10 +10,7 @@ export default function DashboardWelcome(props) {
     <div className="dashboard-opt-cnt">
       <div className="profile-main-notificationes">
         <RecipesNotifications recipeNotifications={recipeNotifications} />
-
-        <UsersNotifications
-          userNotifications={userNotifications}
-        />
+        <UsersNotifications userNotifications={userNotifications}/>
       </div>
     </div>
   );
