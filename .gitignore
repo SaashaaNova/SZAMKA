@@ -9,6 +9,8 @@
 /functions/package-lock.json
 /.vscode
 /src/config
+.firebase/
+
 
 # testing
 /coverage
