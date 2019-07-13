@@ -9,9 +9,11 @@ import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import DashboardNavBar from './DashboardNavBar/DashboardNavBar';
 import DashboardWelcome from './DashboardWelcome/DashboardWelcome';
+import UserProfile from './UserProfile/UserProfile';
 import RecipesList from '../recipes/RecipesList';
 import CreateRecipe from '../recipes/CreateRecipe';
 import UpdateRecipe from '../recipes/UpdateRecipe';
+import CreatePlan from '../plans/CreatePlan';
 import AddBntsCmp from './AddBtnsComponent/AddBtnsCmp';
 import './Dashboard.scss';
 
@@ -32,6 +34,7 @@ function Dashboard(props) {
         <div className="dashboard-main-desktop">
           <AddBntsCmp />
           <Switch>
+            <Route path="/dashboard/profile" component={UserProfile} />
             <Route
               exact
               path="/dashboard"
@@ -47,6 +50,7 @@ function Dashboard(props) {
             />
             <Route path="/dashboard/create-recipe" component={CreateRecipe} />
             <Route path="/dashboard/update/recipe/:id" component={UpdateRecipe} />
+            <Route path="/dashboard/create-plan" component={CreatePlan} />
           </Switch>
 
         </div>
@@ -68,7 +72,7 @@ const mapStateToProps = state => ({
 export default compose(
   connect(mapStateToProps),
   firestoreConnect([
-    { collection: 'recipes' },
+    { collection: 'recipes', orderBy: ['createdAt', 'desc']},
     { collection: 'recipeNotifications', limit: 5, orderBy: ['time', 'desc'] },
     { collection: 'userNotifications', limit: 5, orderBy: ['time', 'desc'] },
   ]),

@@ -56,6 +56,7 @@ export class RecipeTile extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
+  console.log('state', state)
   const { id } = ownProps.recipe;
   const { recipes } = state.firestore.data;
   const recipe = recipes ? recipes[id] : null;

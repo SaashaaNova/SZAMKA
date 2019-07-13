@@ -3,7 +3,14 @@ import './CreateRecipe.scss';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import DishOptionsRecipe from './DishOptionsRecipe';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faPlus
+} from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
 import { createRecipe } from '../../store/actions/recipesActions';
+
+library.add(faPlus);
 
 class CreateRecipe extends React.Component {
     state = {
@@ -83,96 +90,103 @@ class CreateRecipe extends React.Component {
 
       return (
         <div className="add-recipe">
-
-          <div className="add-recipe-title">
-            <h1>Dodaj swój nowy przepis</h1>
-          </div>
-
           <div className="recipe-basic-desc">
             <form onSubmit={this.CreateNewRecipe}>
-              <button>Zapisz</button>
-              <div className="new-recipe-title">
-                <label>Nazwa</label>
-                <input
-                  onChange={this.handleChange}
-                  id="title"
-                  type="text"
-                />
-              </div>
-              <div className="recipe-desc">
-                <label>Opis</label>
-                <textarea
-                  onChange={this.handleChange}
-                  name=""
-                  id="description"
-                  cols="30"
-                  rows="10"
-                />
-              </div>
-              <div className="recipe-type">
-                <label>Jaki typ posiłku ?</label>
-                <select
-                  id={type}
-                  value={this.value}
-                  onChange={this.handleChangeSelect}
-                >
-                  <DishOptionsRecipe />
-                </select>
+              <div className="add-recipe-title">
+                <h1>Dodaj swój nowy przepis</h1>
+                <button>Zapisz</button>
               </div>
 
-
-              <div className="ingredients">
-                <label>Składniki</label>
-
-                <input
-                  value={ingredient}
-                  onChange={this.handleChange}
-                  id="ingredient"
-                  type="text"
-                />
-
-                <button
-                  disabled={!ingredient}
-                  onClick={this.onAddItem}
-                >
-                    Dodaj
-                </button>
+              <div className="form-cnt">
+                <div className="new-recipe-title">
+                  <label>Nazwa</label>
+                  <input
+                    onChange={this.handleChange}
+                    id="title"
+                    type="text"
+                  />
+                </div>
+                <div className="recipe-type">
+                  <label>Jaki typ posiłku ?</label>
+                  <select
+                    id={type}
+                    value={this.value}
+                    onChange={this.handleChangeSelect}
+                  >
+                    <DishOptionsRecipe />
+                  </select>
+                </div>
+                <div className="recipe-desc">
+                  <label>Opis</label>
+                  <textarea
+                    onChange={this.handleChange}
+                    name=""
+                    id="description"
+                    cols="30"
+                    rows="3"
+                  />
+                </div>
               </div>
-              <div>
-                <ul>
-                  {ingredientsArr.map((ingredient, key) => (
-                    <li key={key}>{ingredient}</li>
-                  ))}
-                </ul>
+              
+              <div className="form-cnt">
+                <div className="ingredients">
+                  <div>
+                    <input
+                        value={ingredient}
+                        onChange={this.handleChange}
+                        id="ingredient"
+                        type="text"
+                        placeholder= 'Dodaj składnik'
+                      />
+                      <button
+                        disabled={!ingredient}
+                        onClick={this.onAddItem}
+                      >
+                         <FontAwesomeIcon icon={faPlus} />
+                      </button>
+                  </div>
+                  
+                  
+                    <ul>
+                      {ingredientsArr.map((ingredient, key) => (
+                        <li key={key}>{ingredient}</li>
+                      ))}
+                    </ul>
+                  
+                </div>
+              
+                <div className="instructions">
+                  <div>
+                    <textarea
+                      value={instruction}
+                      onChange={this.handleChange}
+                      name=""
+                      id="instruction"
+                      cols="30"
+                      rows="3"
+                      placeholder= 'Dodaj krok instrukcji'
+                    />
+
+                    <button
+                      disabled={!instruction}
+                      onClick={this.onAddItem}
+                    >
+                        <FontAwesomeIcon icon={faPlus} />
+                    </button>
+                  </div>
+                 
+                  <ol>
+                    {instructionsArr.map((instruction, key) => (
+                      <li key={key}>{instruction}</li>
+                    ))}
+                  </ol>
+                  
+                </div>
+              
+
+
               </div>
-
-
-              <div className="instructions">
-                <label>Przygotowanie</label>
-                <textarea
-                  value={instruction}
-                  onChange={this.handleChange}
-                  name=""
-                  id="instruction"
-                  cols="30"
-                  rows="10"
-                />
-
-                <button
-                  disabled={!instruction}
-                  onClick={this.onAddItem}
-                >
-                    Dodaj
-                </button>
-              </div>
-              <div>
-                <ol>
-                  {instructionsArr.map((instruction, key) => (
-                    <li key={key}>{instruction}</li>
-                  ))}
-                </ol>
-              </div>
-
+             
             </form>
           </div>
 

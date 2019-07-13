@@ -1,0 +1,40 @@
+.user-profile-cnt {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #252A5C;
+
+    h1 {
+        font-size: 3.5em;
+        font-weight: 600;
+        margin-top: 1em;
+    }
+    svg {
+        font-size: 10em;
+    }
+
+    a {
+        display: inline-block;
+        font-size: 1.8em;
+        font-weight: 600;
+        margin-top: .5em;  
+        text-decoration: none;
+        color: #252A5C;
+        transition: .8s;
+
+        &:focus {
+            color: none;
+        }
+
+        &:hover {
+            color: #F5A236;
+        }
+
+        &:active {
+            color: none;
+        }
+    }
+}

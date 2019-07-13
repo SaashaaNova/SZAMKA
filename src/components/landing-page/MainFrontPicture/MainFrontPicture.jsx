@@ -10,7 +10,7 @@ const MainFrontPicture = () => (
 
       <div className="font-pg-bg-txt">
         <h1>
-          Rozpocznij z nami przygdę z
+          Rozpocznij z nami przygdę z{' '}
           <span>gotowaniem</span>
         </h1>
         <Link to="/signup">

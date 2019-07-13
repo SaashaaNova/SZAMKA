@@ -28,7 +28,7 @@ export class AddBntsCmp extends Component {
             </Link>
           </div>
           <div className={`addPlan ${active ? 'movePlan' : null}`}>
-            <Link to="/addPlan" onClick={this.toggleClass}>
+            <Link to="/dashboard/create-plan" onClick={this.toggleClass}>
                 plan
             </Link>
           </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './CreateRecipe.scss';
+import './UpdateRecipe.scss';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import DishOptionsRecipe from './DishOptionsRecipe';
@@ -52,15 +52,15 @@ class UpdateRecipe extends React.Component {
       if (!auth.uid) return <Redirect to="/" />;
 
       return (
-        <div className="add-recipe">
-
-          <div className="add-recipe-title">
-            <h1>Edytuj swój przepis</h1>
-          </div>
+        <div className="update-recipe">
 
           <div className="recipe-basic-desc">
             <form onSubmit={this.UpdateRecipe}>
-              <button>Zapisz</button>
+              <div className="add-recipe-title">
+                <h1>Edytuj swój przepis</h1>
+                <button>Zapisz</button>
+              </div>
+              
               <div className="new-recipe-title">
                 <label>Nowa nazwa</label>
                 <input
@@ -78,7 +78,7 @@ class UpdateRecipe extends React.Component {
                   name=""
                   id="description"
                   cols="30"
-                  rows="10"
+                  rows="5"
                 />
               </div>
               <div className="recipe-type">
