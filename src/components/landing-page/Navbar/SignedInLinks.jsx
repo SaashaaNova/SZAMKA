@@ -26,7 +26,7 @@ class SignedInLinks extends Component {
           <div className="avatar-opts" style={{ height: !this.state.active ? '0' : null }}>
             <ul>
               <li>
-                <NavLink to="/profile">
+                <NavLink to="dashboard/profile">
                   <span>Profil</span>
                 </NavLink>
               </li>
